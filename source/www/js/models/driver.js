@@ -135,6 +135,7 @@ application.factory('Driver', [
                             url: CONFIG.SERVER.URL,
                             params: {
                                 initialize: true,
+                                uid:self.uid,
                                 tripTypeId: 0, // tripType.id,
                                 carId: self.car.id,
                                 driverId: self.id,
