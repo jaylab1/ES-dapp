@@ -1,8 +1,8 @@
 controllers.controller('DriverController@signin', [
     '$scope', '$state', '$stateParams', 'Driver', 'Callback',
-    'Geolocation', '$rootScope', '$ionicLoading', 'Car', '$ionicHistory',
+    'Geolocation', '$rootScope', '$ionicLoading', 'Car', '$ionicHistory','$cordovaDevice'
     function($scope, $state, $stateParams, Driver, Callback,
-        Geolocation, $rootScope, $ionicLoading, Car, $ionicHistory) {
+        Geolocation, $rootScope, $ionicLoading, Car, $ionicHistory,$cordovaDevice) {
         'use strict';
 
 
@@ -11,7 +11,8 @@ controllers.controller('DriverController@signin', [
         // $scope.car = $stateParams.car || $stateParams.data && $stateParams.data.car;
         $scope.login = $stateParams.data && $stateParams.data.login || {};
         var emailElem = angular.element(document.getElementById("signin-email"));
-
+        var uuid = "";
+        document.addEventListener("deviceready", function () { uuid=$cordovaDevice.getUUID();});
         $scope.onLoginTapped = function(login) {
             if (emailElem.val() && emailElem.val().search('@') === -1) {
                 $scope.login.email = emailElem.val() + "@gmail.com";
@@ -21,7 +22,7 @@ controllers.controller('DriverController@signin', [
 
                 Driver.getInstance().email = login.email;
                 Driver.getInstance().password = login.password;
-
+                Driver.getInstance().uuid = uuid;
                 Driver.getInstance().login(new Callback(function() {
 
                     /*Driver.getInstance().car = $scope.car;*/
