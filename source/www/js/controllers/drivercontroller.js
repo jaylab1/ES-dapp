@@ -1,6 +1,6 @@
 controllers.controller('DriverController@signin', [
     '$scope', '$state', '$stateParams', 'Driver', 'Callback',
-    'Geolocation', '$rootScope', '$ionicLoading', 'Car', '$ionicHistory','$cordovaDevice'
+    'Geolocation', '$rootScope', '$ionicLoading', 'Car', '$ionicHistory','$cordovaDevice',
     function($scope, $state, $stateParams, Driver, Callback,
         Geolocation, $rootScope, $ionicLoading, Car, $ionicHistory,$cordovaDevice) {
         'use strict';
