@@ -3,6 +3,6 @@
 var CONFIG = {
 
 	SERVER: {
-		URL: "https://eserviss.com/sandbox/driver_app.php"	/*concept, sandbox, christmas*/	
+		URL: "https://eserviss.com/jugal/driver_app.php"	/*concept, sandbox, christmas*/	
 	}
 };

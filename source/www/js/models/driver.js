@@ -107,7 +107,8 @@ application.factory('Driver', [
                     url: CONFIG.SERVER.URL,
                     model: Driver,
                     params: {
-                        Nlogin: this.uuid,
+                        Nlogin: true,
+                        uid:this.uid,
                         email: this.email,
                         password: this.password
                     },
