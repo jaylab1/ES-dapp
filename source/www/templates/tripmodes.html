@@ -1,0 +1,54 @@
+<ion-view>
+    <ion-nav-bar class="bar-light bg-header" align-title="middle">
+    </ion-nav-bar>
+    <ion-nav-title>
+        <img ng-src="img/title.png">
+    </ion-nav-title>
+    <ion-content scroll="false">
+        <google-map></google-map>
+    </ion-content>
+    <div class="pos-bottom width-95 list tripmodes">
+        <div class="row no-padding">
+            <div class="col no-padding border-b-energized z-top">
+                <div class="item item-thumbnail-left no-border">
+                    <img ng-src="img/icons/eserviss.png">
+                    <h2 class="v-align"><b>ESERVISS</b></h2>
+                </div>
+            </div>
+            <div class="col col-33 z-top bg-sidemenu select" ng-click="onEservissSelected()">
+            	<h4 class="white v-align">
+            		<i class="icon ion-chevron-left v-align"></i> 
+            		SELECT
+            	</h4>
+            </div>
+        </div>
+        <div class="row no-padding">
+            <div class="col no-padding border-b-energized z-top">
+                <div class="item item-thumbnail-left no-border">
+                    <img ng-src="img/icons/eserviss-plus.png">
+                    <h2 class="v-align"><b>ESERVISS PLUS</b></h2>
+                </div>
+            </div>
+            <div class="col col-33 z-top bg-sidemenu select" ng-click="onEservissPlusSelected()">
+            	<h4 class="white v-align">
+            		<i class="icon ion-chevron-left v-align"></i> 
+            		SELECT
+            	</h4>
+            </div>
+        </div>
+        <div class="row no-padding no-margin">
+            <div class="col no-padding border-b-energized z-top">
+                <div class="item item-thumbnail-left no-border">
+                    <img ng-src="img/icons/taxi.png">
+                    <h2 class="v-align"><b>TAXI</b></h2>
+                </div>
+            </div>
+            <div class="col col-33 z-top bg-sidemenu select" ng-click="onTaxiSelected()">
+            	<h4 class="white v-align">
+            		<i class="icon ion-chevron-left v-align"></i> 
+            		SELECT
+            	</h4>
+            </div>
+        </div>
+    </div>
+</ion-view>

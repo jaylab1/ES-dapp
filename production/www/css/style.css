@@ -1,0 +1,407 @@
+.bg-header {
+    background-color: #F7F7F7 !important;
+}
+
+
+.bg-sidemenu,
+.bg-sidemenu a {
+    background-color: #FFB200 !important;
+}
+
+.bg-black {
+    background-color: #000000 !important;
+}
+
+.no-bg {
+    background-color: transparent;
+}
+
+.white {
+    color: #ffffff !important;
+}
+
+.border-b-energized {
+    border-bottom: 4px solid;
+    border-color: #FFCE42 !important;
+}
+
+.border-b-light {
+    border-bottom: 3px solid;
+    border-color: #ffffff !important;
+}
+
+.sidemenu-border {
+    border-color: #FFCE42 !important;
+}
+
+.pos-bottom {
+    position: absolute;
+    bottom: 0 !important;
+}
+
+.bg-content {
+    background-color: #F9F9F9 !important;
+}
+
+.z-top {
+    z-index: 100;
+}
+
+.width-full {
+    width: 100% !important;
+}
+
+.width-95 {
+    width: 95% !important;
+}
+
+.no-radius {
+    border-radius: 0px !important;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.no-border {
+    border: none;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.normal-whitespace {
+    white-space: normal;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+
+
+/**
+ * Home Page: custom eserviss popups
+ */
+
+.backdrop.visible.active {
+    background: rgba(255, 255, 255, 0.9);
+    top: 43px;
+}
+
+.eserviss-popup .popup {
+    background-color: transparent !important;
+    width: 90%;
+}
+
+.eserviss-popup.popup-top {
+    top: 45px;
+    bottom: initial;
+}
+
+.eserviss-popup .popup-head {
+    display: none;
+}
+
+.eserviss-popup .popup-body {
+    background-color: #ffffff;
+    border: 2px solid #EEAF14;
+    border-radius: 3px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.eserviss-popup .hail-border {
+    width: 100%;
+    height: 5px;
+    border-bottom: 3px dashed #d3d3d3;
+}
+
+.eserviss-popup .popup-buttons {
+    display: none;
+}
+
+.eserviss-popup-alert .popup {
+    width: 90%;
+}
+
+.eserviss-popup-alert .popup .popup-head {
+    display: none;
+}
+
+.eserviss-popup-alert .popup .popup-buttons {
+    padding: 0;
+    border-bottom: 2px solid #5B5B5D;
+}
+
+.eserviss-popup input {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: inherit;
+}
+
+/**
+ * Login Page
+ */
+
+.login-legend {
+    margin-top: 10% !important;
+    margin-bottom: 5% !important;
+    text-align: center !important;
+}
+
+.login-legend img {
+    height: 50px;
+}
+
+.login-input .item-input {
+    margin-bottom: 10px !important;
+}
+
+.p-t-3 {
+    padding-top: 3%;
+}
+
+.p-r-3 {
+    padding-right: 3%;
+}
+/**
+ * trip modes: trip modes selection;
+ */
+
+.tripmodes .row {
+    margin: 0 auto;
+    margin-bottom: 1px;
+}
+
+.tripmodes .item-thumbnail-left {
+    min-height: 0px;
+    padding-left: 70px;
+    padding-top: 16px;
+}
+
+.tripmodes .item-thumbnail-left img {
+    top: 6px;
+    left: 0;
+    width: 50px;
+    height: 45px;
+}
+
+.tripmodes .v-align {
+    height: 30px;
+    line-height: 30px;
+}
+
+.tripmodes .select {
+    border-radius: 0 15px 15px 0;
+    position: relative;
+    bottom: 2px;
+}
+
+/**
+ * trip modes: tabs;
+ */
+.mode-tabs .col {
+    padding: 10px 0 0 0;
+}
+
+.mode-tabs img {
+    width: 50px;
+    height: 50px;
+}
+/**
+ * car slots: slots;
+ */
+
+.slots .v-align {
+    height: 73px;
+    line-height: 73px;
+    text-align: center;
+    /*margin: 0;
+    position: relative;*/
+}
+
+.slots .v-align p, .slots .v-align span, .slots .v-align h2, .slots .v-align h5 {
+    /*position: absolute;
+    top: 25%;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.slots .row {
+    margin: 0 auto;
+    /*margin-bottom: 1px;*/
+    height: 73px;
+    text-align: center;
+}
+
+.slots .pay-badge {
+    background-color: #DA2222 !important;
+    color: #FFFFFF !important;
+}
+/*.slots .pay-badge {
+    padding: 7px 11px;
+    border-radius: 20%;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pay-badge.badge-assertive {
+	background-color: #ef473a;
+	color: white;
+}
+
+.pay-badge.badge-stable {
+	background-color: #f8f8f8;
+	color: #444;
+}*/
+
+.slots .location {
+	margin-top: 18px;
+}
+
+/**
+ * Mode info above slots
+ */
+.row.mode-info {
+    height: 40px;
+}
+
+.mode-info .v-align {
+    height: 40px;
+    line-height: 40px;
+}
+
+.mode-info .item-thumbnail-left img {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 35px;
+}
+
+.mode-info .item-thumbnail-left {
+    min-height: 0px;
+    padding-left: 50px;
+    padding-top: 0px;
+}
+
+.mode-info .reset-modes {
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.mode-info h2, .mode-info .button.reset-modes {
+    color: #FFB200;
+}
+
+.nav-bar-title,
+.nav-bar-title img {
+    vertical-align: middle;
+}
+
+/**
+ * Mode Confirm popup
+ */
+.modeconfirm {
+    padding: 35px;
+}
+
+/**
+ * Hail Request popup
+ */
+.hail-request-popup {
+    padding: 1px;
+    overflow: hidden;
+}
+
+.hail-request-popup .list {
+    margin: 0;
+}
+
+.hail-request-popup .item.header {
+    padding: 0;
+    border: none;
+}
+.hail-request-popup .item {
+    padding: 0 0 55px 0;
+    height: 50px;
+    min-height: 50px;
+    border-bottom: 2px dashed #d3d3d3;
+}
+
+.hail-request-popup .item:last-child {
+    border-bottom: none;
+}
+
+.hail-request-popup .list .item h2, .hail-request-popup.edit .list .item input.ion-google-place[readonly] {
+    line-height: 50px;
+    padding-left: 60px;
+}
+
+.hail-request-popup .item-avatar img {
+    left: 10px;
+    top: 5px;
+    height: 50px;
+    border-radius: 0;
+}
+
+.hail-request-popup.edit .numbers {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/**
+ * google places
+ */
+/*.ion-google-place-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+}
+
+input.ion-google-place[readonly] {
+    background-color: transparent;
+    cursor: text;
+}*/
+
+.pac-container {
+    left: 0px !important;
+    width: 100% !important;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.pac-container .pac-item {
+    padding: 15px 10px;
+}
+
+.pac-container * {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/**
+ * internet is off modal
+ */
+#internetoff-modal {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#internetoff-modal .message {
+    padding-top: 50%;
+}

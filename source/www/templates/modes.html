@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-nav-bar>
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-clear" ng-click="onDoneTapped(selected.mode)">
+                Done
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-title>
+        Driving Modes
+    </ion-nav-title>
+    <ion-content>
+        <div class="list">
+            <label class="item item-radio" ng-repeat="mode in modes">
+                <input type="radio" name="carMode" ng-model="selected.mode" ng-value="mode">
+                <div class="item-content">
+                    {{mode.name}}
+                </div>
+                <i class="radio-icon energized ion-checkmark"></i>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

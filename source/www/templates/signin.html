@@ -1,0 +1,29 @@
+<ion-view view-cache="true">
+    <ion-nav-bar class="bar-light bg-header" align-title="middle">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-title>
+        <img ng-src="img/title.png">
+    </ion-nav-title>
+    <ion-content class="bg-content padding">
+        <div class="login-legend">
+            <img ng-src="img/login-title.png">
+        </div>
+        <div class="list login-input">
+            <label class="item item-input">
+                <input type="email" placeholder="EMAIL" id="signin-email" ng-model="login.email">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="PASSWORD" ng-model="login.password">
+            </label>
+            <!-- <label class="item" ui-sref="cars({data: {'login': login, 'car': car, 'mode': mode}})">
+                <div class="item-icon-right">
+                    <h2>{{car.name ? car.name : 'Pick Car'}}</h2>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </div>
+            </label> -->
+            <button class="button button-block button-energized" type="submit" ng-click="onLoginTapped(login)">Log in</button>
+        </div>
+    </ion-content>
+</ion-view>

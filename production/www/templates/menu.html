@@ -1,0 +1,57 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content edge-drag-threshold="true">
+        <ion-nav-bar class="bar-stable" align-title="middle">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-title>
+                <img ng-src="img/title.png">
+            </ion-nav-title>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" class="bg-sidemenu">
+        <ion-content class="no-header">
+            <ion-list>
+                <ion-item class="item-avatar bg-sidemenu sidemenu-border">
+                    <img ng-src="{{photo}}">
+                    <h2>{{name}}</h2>
+                    <!-- <p>{{state}}</p> -->
+                    <p>ping: {{pingCounter || 0}}</p>
+                </ion-item>
+                <ion-item class="item-avatar bg-sidemenu sidemenu-border">
+                    <img ng-src="{{car.image}}">
+                    <h2>{{car.name}}</h2>
+                    <p>{{car.plateNumber}}</p>
+                </ion-item>
+                <ion-item nav-clear class="item-icon-left bg-sidemenu sidemenu-border">
+                    <b>DAILY INCOME: {{driver.dailyIncome}}</b>
+                    <i class="icon ion-cash"></i>
+                </ion-item>
+                <ion-item nav-clear class="item-icon-left bg-sidemenu sidemenu-border" menu-close ui-sref="menu.home">
+                    <b>HOME</b>
+                    <i class="icon ion-ios-home-outline"></i>
+                </ion-item>
+                <ion-item nav-clear class="item-icon-left bg-sidemenu sidemenu-border" menu-close ui-sref="menu.profile">
+                    <b>PROFILE</b>
+                    <i class="icon ion-ios-person-outline"></i>
+                </ion-item>
+                <ion-item nav-clear class="item-icon-left bg-sidemenu sidemenu-border" menu-close>
+                    <b>SETTINGS</b>
+                    <i class="icon ion-ios-gear-outline"></i>
+                </ion-item>
+                <ion-item nav-clear class="item-icon-left bg-sidemenu sidemenu-border" menu-close>
+                    <b>SUPPORT</b>
+                    <i class="icon ion-ios-help-outline"></i>
+                </ion-item>
+                <ion-item nav-clear class="item-icon-left bg-sidemenu sidemenu-border" menu-close ng-click="onSignoutTapped()">
+                    <b>SIGNOUT</b>
+                    <i class="icon ion-power"></i>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

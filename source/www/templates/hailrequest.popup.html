@@ -1,0 +1,51 @@
+<div class="hail-request-popup bg-sidemenu" ng-class="{'edit': request.isEditing}">
+    <div class="list">
+        <div class="item item-avatar header no-border bg-sidemenu">
+            <img src="img/icons/passenger.png">
+            <h2 class="light">
+                <b>{{request.userName}} ({{request.passenger}} passenger{{request.passenger > 1 ? 's' : ''}})</b>
+            </h2>
+            <div class="numbers" ng-if="request.isEditing && !request.mode.isTaxi()">
+                <button class="button-icon icon ion-android-add light" ng-click="onPassengersPlusTapped()"></button>
+                <button class="button-icon icon ion-android-remove light" ng-click="onPassengersMinusTapped()"></button>
+            </div>
+        </div>
+        <div class="item item-text-wrap item-avatar no-border">
+            <img ng-src="img/icons/phone.png">
+            <h2><b>{{request.userName}} - {{request.phone}}</b></h2>
+        </div>
+        <div class="item item-text-wrap item-avatar no-border">
+            <img ng-src="{{request.mode.icon}}">
+            <h2><b>{{request.mode.name}}</b></h2>
+        </div>
+        <div class="item item-text-wrap item-avatar no-border">
+            <img src="img/icons/pickup.png">
+            <h2>{{request.fromAddress}}</h2>
+        </div>
+        <div class="item item-avatar no-border" ng-class="{'item-text-wrap': !request.isEditing, 'item-input': request.isEditing}">
+            <img src="img/icons/dropoff.png">
+            <h2 ng-if="!request.isEditing">{{request.toAddress}}</h2>
+            <input ng-if="request.isEditing" type="text" placeholder="Enter dropoff address" g-places-autocomplete ng-model="data" options="{componentRestrictions: { country: 'lb' }}" style="padding-top: 50px; padding-left: 60px;" />
+        </div>
+        <div class="item item-text-wrap item-avatar no-border">
+            <img src="img/icons/comment.png">
+            <h2>{{request.comment}}</h2>
+        </div>
+    </div>
+    <div class="row no-padding" ng-if="!request.isResponsed">
+        <button class="col col-67 no-radius no-border button button-energized bg-sidemenu" ng-click="onRequestAcceptTapped()">
+            ACCEPT
+        </button>
+        <button class="col no-radius button button-light no-border" ng-click="onRequestDeclineTapped()">
+            DECLINE
+        </button>
+    </div>
+    <div class="row no-padding" ng-if="request.isResponsed">
+        <button class="col col-67 no-radius no-border button button-energized bg-sidemenu" ng-click="onCancelRideTapped()">
+            CANCEL RIDE
+        </button>
+        <button class="col no-radius button button-light no-border" ng-click="onCloseTapped()">
+            CLOSE
+        </button>
+    </div>
+</div>

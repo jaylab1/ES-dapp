@@ -1,0 +1,99 @@
+<ion-view view-cache="false">
+    <ion-content scroll="false">
+        <google-map></google-map>
+    </ion-content>
+    <div class="pos-bottom z-top width-full">
+        <div class="row">
+            <div class="col col-10 col-offset-80">
+                <button class="button button-stable" ng-click="onCenterTapped()">
+                    <i class="icon ion-navigate"></i>
+                </button>
+            </div>
+        </div>
+        <div ng-if="driver.mode" class="slots fx-bounce-up fx-easing-elastic fx-speed-300">
+            <div class="row no-padding bg-content mode-info">
+                <div class="col no-padding no-border">
+                    <div class="item item-thumbnail-left item-button-right no-border no-bg">
+                        <img ng-src="img/icons/eserviss.png">
+                        <h2 class="v-align float-left"><b>{{driver.mode.name}}</b></h2>
+                        <button class="button button-clear button-dark" style="right: 0px;" ng-click="onResetModeTapped()"> 
+                            RESET MODE
+                        </button>
+                    </div>
+                </div>
+                <!-- <div class="col no-padding">
+                    <p class="v-align float-right p-r-3">{{driver.car.name}}</p>
+                </div> -->
+            </div>
+            <div class="row no-padding fx-bounce-up fx-easing-elastic fx-speed-300" hm-panright="onRoadSlotDragRight($event)" hm-panend="onRoadSlotDragRelease($event, roadSlot)" ng-repeat="roadSlot in driver.mode.roadSlots track by $index">
+                <div class="col col-10 bg-sidemenu no-padding border-b-energized z-top v-align">
+                    <h2 class="white">
+                        <b>{{$index + 1}}</b>
+                    </h2>
+                </div>
+                <div class="col no-padding bg-sidemenu border-b-energized z-top v-align">
+                    <p class="white location no-margin">
+                        ROAD HAIL
+                    </p>
+                </div>
+                <div class="col col-25 no-padding bg-black border-b-energized z-top v-align">
+                    <h5 class="white">
+                        OCCUPIED
+                        <i class="icon ion-chevron-right v-align"></i>   
+                    </h5>
+                </div>
+            </div>
+            <div class="row no-padding fx-bounce-up fx-easing-elastic fx-speed-300" hm-panright="onOccupiedSlotDragRight($event)" hm-panend="onOccupiedSlotDragRelease($event, occupiedSlot)" ng-repeat="occupiedSlot in driver.mode.occupiedSlots track by $index" ng-click="onOccupiedSlotTapped(occupiedSlot)">
+                <div class="col col-10 bg-sidemenu no-padding border-b-energized z-top v-align">
+                    <h2 class="white">
+                        <b>{{$index + driver.mode.roadSlots.length + 1}}</b>
+                    </h2>
+                </div>
+                <div class="col col-10 bg-sidemenu no-padding border-b-energized z-top v-align">
+                    <span class="pay-badge badge-assertive" ng-class="{'bage-stable': occupiedSlot.isPayed, 'badge-assertive': occupiedSlot.isPayed}">
+                        {{occupiedSlot.isPayed ? 'PAID' : 'NOT PAID'}}
+                    </span>
+                </div>
+                <div class="col col-20 bg-sidemenu no-padding border-b-energized z-top v-align">
+                    <p class="white">{{occupiedSlot.userName}} <br> {{occupiedSlot.phone}}</p>
+                </div>
+                <div class="col no-padding bg-sidemenu border-b-energized z-top">
+                    <p class="white location">
+                        {{occupiedSlot.state === 'PICKUP' || occupiedSlot.state === 'ARRIVE' ? occupiedSlot.fromAddress : occupiedSlot.toAddress}}
+                    </p>
+                </div>
+                <div class="col col-25 no-padding bg-black border-b-energized z-top v-align">
+                    <h5 class="white">
+                        {{occupiedSlot.state}}
+                        <i class="icon ion-chevron-right v-align"></i>   
+                    </h5>
+                </div>
+            </div>
+            <div class="row no-padding fx-bounce-up fx-easing-elastic fx-speed-300" hm-panright="onEmptySlotDragRight($event)" hm-panend="onEmptySlotDragRelease($event, slot)" ng-repeat="emptySlot in driver.mode.emptySlots track by $index">
+                <div class="col col-10 bg-sidemenu no-padding border-b-energized z-top v-align">
+                    <h2 class="white">
+                        <b>{{driver.mode.roadSlots.length + driver.mode.occupiedSlots.length + $index + 1}}</b>
+                    </h2>
+                </div>
+                <div class="col col-20 bg-sidemenu no-padding border-b-energized z-top v-align">
+                </div>
+                <div class="col no-padding bg-sidemenu border-b-energized z-top">
+                    <p class="white location"></p>
+                </div>
+                <div class="col col-25 no-padding bg-black border-b-energized z-top v-align">
+                    <h5 class="white">
+                        OCCUPY
+                        <i class="icon ion-chevron-right v-align"></i>   
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="modes && !driver.mode" class="pos-bottom width-full z-top bg-black fx-bounce-up fx-easing-elastic fx-speed-300">
+        <div class="row no-padding mode-tabs">
+            <div class="col text-center fx-bounce-up fx-easing-elastic fx-speed-300" ng-repeat="mode in modes" ng-click="onModeTapped(mode)">
+                <img ng-src="{{mode.tabIcon}}">
+            </div>
+        </div>
+    </div>
+</ion-view>

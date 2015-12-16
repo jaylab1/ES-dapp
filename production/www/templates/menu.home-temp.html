@@ -1,0 +1,81 @@
+<ion-view>
+    <ion-content scroll="false">
+        <google-map></google-map>
+    </ion-content>
+    <div class="pos-bottom z-top width-full">
+        <div class="row">
+            <div class="col col-10 col-offset-80">
+                <button class="button button-stable" ng-click="onCenterTapped()">
+                    <i class="icon ion-navigate"></i>
+                </button>
+            </div>
+        </div>
+        <div ng-if="isSlotsShown" class="slots fx-bounce-up fx-easing-elastic fx-speed-300">
+            <div class="row no-padding bg-content mode-info">
+                <div class="col col-50 no-padding no-border">
+                    <div class="item item-thumbnail-left no-border no-bg">
+                        <img ng-src="img/icons/eserviss.png">
+                        <h2 class="v-align float-left"><b>{{driver.mode.name}}</b></h2>
+                    </div>
+                </div>
+                <div class="col no-padding">
+                    <p class="v-align float-right p-r-3">{{driver.car.name}}</p>
+                </div>
+            </div>
+            <div class="row no-padding" hm-panright="onSlotDragRight($event)" hm-panend="onSlotDragRelease($event, slot)">
+                <div class="col col-10 bg-sidemenu no-padding border-b-light z-top">
+                    <h2 class="white v-align">
+                        <b>1</b>
+                    </h2>
+                </div>
+                <div class="col col-20 bg-sidemenu no-padding border-b-light z-top v-align">
+                    <span class="pay-badge bage-stable">PAID</span>
+                </div>
+                <div class="col no-padding bg-sidemenu border-b-light z-top">
+                    <p class="white location">ACHRAFIEH MAIN ROAD NEAR EGNYT COMPANY</p>
+                </div>
+                <div class="col col-25 no-padding bg-black border-b-light z-top">
+                    <h5 class="white v-align">
+                        PICKUP
+                        <i class="icon ion-chevron-right v-align"></i>   
+                    </h5>
+                </div>
+            </div>
+            <div class="row no-padding">
+                <div class="col col-10 bg-sidemenu no-padding border-b-energized z-top">
+                    <h2 class="white v-align">
+                        <b>2</b>
+                    </h2>
+                </div>
+                <div class="col col-20 bg-sidemenu no-padding border-b-energized z-top v-align">
+                    <span class="pay-badge bage-assertive">NOT PAID</span>
+                </div>
+                <div class="col no-padding bg-sidemenu border-b-energized z-top">
+                    <p class="white location">ACHRAFIEH MAIN ROAD NEAR EGNYT COMPANY</p>
+                </div>
+                <div class="col col-25 no-padding bg-black border-b-energized z-top">
+                    <h5 class="white v-align">
+                        DROPOFF
+                        <i class="icon ion-chevron-right v-align"></i>   
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pos-bottom width-95 tripmodes z-top">
+        <div class="row no-padding fx-bounce-up fx-easing-elastic fx-speed-300" ng-repeat="mode in modes" hm-panleft="onModeDragLeft($event)" hm-panend="onModeDragRelease($event, mode)">
+            <div class="col no-padding border-b-energized z-top">
+                <div class="item item-thumbnail-left no-border">
+                    <img ng-src="{{mode.icon}}">
+                    <h2 class="v-align"><b>{{mode.name}}</b></h2>
+                </div>
+            </div>
+            <div class="col col-33 z-top bg-sidemenu select">
+                <h4 class="white v-align">
+                    <i class="icon ion-chevron-left v-align"></i> 
+                    SELECT
+                </h4>
+            </div>
+        </div>
+    </div>
+</ion-view>

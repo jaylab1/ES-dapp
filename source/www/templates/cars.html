@@ -1,0 +1,25 @@
+<ion-view>
+    
+    <ion-nav-bar>
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-clear" ng-click="onDoneTapped()">
+                Done
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-title>
+        Cars
+    </ion-nav-title>
+    <ion-content>
+        <div class="list">
+            <label class="item item-radio" ng-repeat="car in cars">
+                <input type="radio" name="carMode" ng-model="selected.car" ng-value="car">
+                <div class="item-content">
+                    {{car.name}}
+                </div>
+                <i class="radio-icon energized ion-checkmark"></i>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>
